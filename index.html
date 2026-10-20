@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="data:," />
+    <title>سياسة الخصوصية — المتقن في الإعراب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --emerald: #0b3d2e;
+        --emerald-deep: #082e22;
+        --ivory: #faf6ec;
+        --ivory-card: #fffdf6;
+        --gold: #c9a227;
+        --gold-soft: #e3cf8f;
+        --gold-line: rgba(201, 162, 39, 0.45);
+        --ink: #22302a;
+        --ink-soft: #46564d;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--ivory);
+        color: var(--ink);
+        font-family: "Noto Naskh Arabic", "Amiri", serif;
+        font-size: 1.075rem;
+        line-height: 1.95;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ---------- Header band ---------- */
+      .band {
+        background: linear-gradient(180deg, var(--emerald) 0%, var(--emerald-deep) 100%);
+        color: var(--ivory);
+        text-align: center;
+        padding: 3rem 1.25rem 2.6rem;
+        border-bottom: 3px solid var(--gold);
+      }
+
+      .diamond {
+        width: 13px;
+        height: 13px;
+        margin: 0 auto 1.35rem;
+        background: var(--gold);
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 5px rgba(201, 162, 39, 0.18);
+      }
+
+      .app-name {
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-size: clamp(2rem, 6vw, 2.9rem);
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0;
+        color: #fdfaf1;
+      }
+
+      .app-latin {
+        margin: 0.35rem 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+        letter-spacing: 0.42em;
+        text-indent: 0.42em;
+        color: var(--gold-soft);
+        direction: ltr;
+      }
+
+      .rule {
+        width: 120px;
+        height: 1px;
+        margin: 1.5rem auto;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        border: 0;
+      }
+
+      .badge {
+        display: inline-block;
+        border: 1px solid var(--gold);
+        border-radius: 999px;
+        padding: 0.3rem 1.4rem 0.45rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #fdfaf1;
+        background: rgba(201, 162, 39, 0.12);
+      }
+
+      .jump {
+        display: inline-block;
+        margin-top: 1.15rem;
+        color: var(--gold-soft);
+        font-size: 0.95rem;
+        text-decoration: none;
+        border-bottom: 1px dotted var(--gold);
+        padding-bottom: 1px;
+      }
+      .jump:hover, .jump:focus-visible { color: #fdfaf1; }
+
+      /* ---------- Layout ---------- */
+      .wrap {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 2.6rem 1.15rem 1rem;
+      }
+
+      .doc-title {
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-size: clamp(1.55rem, 4.6vw, 2.05rem);
+        font-weight: 700;
+        line-height: 1.6;
+        color: var(--emerald);
+        margin: 0 0 0.4rem;
+        text-align: center;
+      }
+
+      .effective {
+        text-align: center;
+        font-weight: 700;
+        color: var(--ink);
+        margin: 0 0 0.6rem;
+      }
+
+      .lang-label {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin: 2.2rem 0 1.3rem;
+        color: var(--emerald);
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+      .lang-label::before,
+      .lang-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--gold-line);
+      }
+      .lang-label .diamond-sm {
+        width: 8px;
+        height: 8px;
+        flex: none;
+        background: var(--gold);
+        transform: rotate(45deg);
+      }
+
+      .lead {
+        font-size: 1.12rem;
+        margin: 0 0 0.4rem;
+      }
+      .lead strong, p strong { color: var(--emerald); }
+
+      /* ---------- Section cards ---------- */
+      .card {
+        background: var(--ivory-card);
+        border: 1px solid var(--gold-line);
+        border-radius: 14px;
+        padding: 1.35rem 1.6rem 1.5rem;
+        margin: 1.15rem 0;
+        box-shadow: 0 2px 10px rgba(11, 61, 46, 0.05);
+      }
+
+      .card h3 {
+        font-family: "Amiri", "Noto Naskh Arabic", serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--emerald);
+        margin: 0 0 0.55rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--gold-line);
+        line-height: 1.7;
+      }
+
+      .card p { margin: 0; color: var(--ink); }
+      .card p + p { margin-top: 0.6rem; }
+
+      .card ul {
+        margin: 0;
+        padding-inline-start: 1.35rem;
+      }
+      .card li { margin: 0.3rem 0; }
+      .card li::marker { color: var(--gold); }
+
+      .mail {
+        color: var(--emerald);
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 1px solid var(--gold);
+        direction: ltr;
+        unicode-bidi: embed;
+        white-space: nowrap;
+      }
+      .mail:hover, .mail:focus-visible { color: var(--gold); }
+
+      /* ---------- English block ---------- */
+      .en {
+        direction: ltr;
+        text-align: left;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.75;
+        margin-top: 3.4rem;
+      }
+      .en .doc-title { font-family: Georgia, "Times New Roman", serif; text-align: center; }
+      .en .lang-label { font-family: Georgia, "Times New Roman", serif; }
+      .en .card h3 { font-family: Georgia, "Times New Roman", serif; }
+      .en .lead { font-size: 1.08rem; }
+
+      /* ---------- Footer ---------- */
+      footer {
+        max-width: 840px;
+        margin: 2.8rem auto 0;
+        padding: 1.8rem 1.15rem 2.6rem;
+        text-align: center;
+        border-top: 1px solid var(--gold-line);
+      }
+      footer .diamond {
+        margin-bottom: 1.1rem;
+        width: 10px;
+        height: 10px;
+      }
+      .dev-line {
+        margin: 0;
+        font-weight: 600;
+        color: var(--emerald);
+        font-size: 1.02rem;
+        line-height: 1.9;
+      }
+      .pkg-line {
+        margin: 0.35rem 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        direction: ltr;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 560px) {
+        body { font-size: 1.02rem; }
+        .band { padding: 2.3rem 1rem 2rem; }
+        .card { padding: 1.15rem 1.15rem 1.3rem; border-radius: 12px; }
+        .wrap { padding-top: 2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== Header band ===== -->
+    <header class="band">
+      <div class="diamond" aria-hidden="true"></div>
+      <h2 class="app-name">المتقن في الإعراب</h2>
+      <p class="app-latin">AL-MUTQIN FI AL-I'RAB</p>
+      <hr class="rule" />
+      <span class="badge">سياسة الخصوصية • Privacy Policy</span>
+      <br />
+      <a class="jump" href="#english">English version ↓</a>
+    </header>
+
+    <main class="wrap">
+      <!-- ===== Arabic ===== -->
+      <section lang="ar">
+        <h1 class="doc-title">سياسة الخصوصية — تطبيق «المتقن في الإعراب»</h1>
+        <p class="effective">تاريخ السريان: 20 أكتوبر 2026</p>
+
+        <div class="lang-label" aria-hidden="true"><span class="diamond-sm"></span>العربية</div>
+
+        <p class="lead">تطبيق «المتقن في الإعراب» (الحزمة: com.ehab.irab.mutqin)، طوره د. إيهاب محمود أحمد، يحترم خصوصيتك احتراما كاملا، وتقوم سياسته على مبدأ بسيط: <strong>لا نجمع أية بيانات</strong>.</p>
+
+        <article class="card">
+          <h3>البيانات التي نجمعها</h3>
+          <p>لا يجمع التطبيق أية بيانات شخصية أو غير شخصية: لا أسماء، ولا عناوين بريد إلكتروني، ولا مواقع، ولا معرّفات أجهزة، ولا بيانات استخدام. لا يتضمّن التطبيق حسابات مستخدمين، ولا نماذج إدخال تُرسَل إلى أي خادم.</p>
+        </article>
+
+        <article class="card">
+          <h3>الأذونات والاتصال بالشبكة</h3>
+          <ul>
+            <li>لا يطلب التطبيق أية صلاحية (Permissions) من نظام أندرويد.</li>
+            <li>لا يجري التطبيق أي اتصال بالإنترنت؛ فجميع البيانات والمحركات محفوظة محليا داخل التطبيق.</li>
+            <li>لا يعرض التطبيق إعلانات، ولا يتضمّن أية مكتبات إعلانية أو تحليلية أو أدوات تتبّع من أطراف ثالثة.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>التخزين المحلي</h3>
+          <p>يحفظ التطبيق على جهازك فحسب — لغرض تشغيله — تفضيلاتك (بما فيها الهوية اللونية وحجم الخط والمظهر الليلي) وجملك وآياتك المفضّلة وتقدّمك التعليمي ونقاطك. هذه البيانات لا تغادر جهازك أبدا، وتُحذف نهائيا بحذف التطبيق أو مسح بياناته من إعدادات النظام.</p>
+        </article>
+
+        <article class="card">
+          <h3>النطق الصوتي</h3>
+          <p>تتم معالجة النطق الصوتي (تحويل النص إلى كلام) بوساطة محرك النطق المثبّت على جهازك نفسه، ولا يرسل التطبيق أي نص منطوق إلى أية جهة خارجية.</p>
+        </article>
+
+        <article class="card">
+          <h3>الأطفال</h3>
+          <p>التطبيق تعليمي عام، لا يجمع بيانات من أي مستخدم أيا كانت سنّه، بما في ذلك الأطفال.</p>
+        </article>
+
+        <article class="card">
+          <h3>التغييرات</h3>
+          <p>إن طرأ أي تغيير على هذه السياسة فسيُنشر في هذه الصفحة مع تحديث تاريخ السريان، وسيُذكر في ملاحظات إصدار التطبيق.</p>
+        </article>
+
+        <article class="card">
+          <h3>التواصل</h3>
+          <p>لأي استفسار عن الخصوصية: <a class="mail" href="mailto:ehabgrm@yahoo.com"><strong>ehabgrm@yahoo.com</strong></a></p>
+        </article>
+      </section>
+
+      <!-- ===== English ===== -->
+      <section class="en" id="english" lang="en">
+        <h1 class="doc-title">Privacy Policy — "Al-Mutqin fi al-I'rab" App</h1>
+        <p class="effective">Effective date: 20 October 2026</p>
+
+        <div class="lang-label" aria-hidden="true"><span class="diamond-sm"></span>English</div>
+
+        <p class="lead">The "Al-Mutqin fi al-I'rab — Arabic Grammar (I'rab) Mastery" app (package: com.ehab.irab.mutqin), developed by Dr. Ehab Mahmoud Ahmed, follows a simple principle: <strong>we collect no data at all</strong>.</p>
+
+        <article class="card">
+          <h3>Data we collect</h3>
+          <p>The app collects no personal or non-personal data: no names, no email addresses, no locations, no device identifiers, and no usage data. The app has no user accounts and no forms that transmit anything to any server.</p>
+        </article>
+
+        <article class="card">
+          <h3>Permissions and network access</h3>
+          <ul>
+            <li>The app requests <strong>no Android permissions</strong> at all.</li>
+            <li>The app makes no internet connections; all data and engines are stored locally inside the app.</li>
+            <li>The app shows no ads and contains no advertising, analytics, or third-party tracking libraries.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Local storage</h3>
+          <p>Solely to function, the app stores on your device only: your preferences (including colour theme, font size, and dark mode), your favourite sentences and verses, and your learning progress and points. This data never leaves your device and is permanently deleted when you uninstall the app or clear its data in system settings.</p>
+        </article>
+
+        <article class="card">
+          <h3>Text-to-speech</h3>
+          <p>Pronunciation (text-to-speech) is processed by the speech engine installed on your own device; the app sends no spoken text to any external party.</p>
+        </article>
+
+        <article class="card">
+          <h3>Children</h3>
+          <p>This is a general educational app. It collects no data from any user of any age, including children.</p>
+        </article>
+
+        <article class="card">
+          <h3>Changes</h3>
+          <p>Any change to this policy will be published on this page with an updated effective date and noted in the app's release notes.</p>
+        </article>
+
+        <article class="card">
+          <h3>Contact</h3>
+          <p>For any privacy enquiry: <a class="mail" href="mailto:ehabgrm@yahoo.com"><strong>ehabgrm@yahoo.com</strong></a></p>
+        </article>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="diamond" aria-hidden="true"></div>
+      <p class="dev-line">المطوّر: د. إيهاب محمود أحمد — مدرس بقسم اللغة العربية وآدابها، كلية الآداب، جامعة عين شمس</p>
+      <p class="pkg-line">com.ehab.irab.mutqin</p>
+    </footer>
+  </body>
+</html>
